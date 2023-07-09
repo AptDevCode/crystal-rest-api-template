@@ -1,6 +1,6 @@
 require "grip"
 
-class DemoController < Grip::Controllers::Http
+class ProjectController < Grip::Controllers::Http
   def get(context : Context)
     context
       .put_status(201)
