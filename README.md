@@ -44,7 +44,7 @@ crystal src/main.cr
 Test it via a `curl` command.
 
 ```bash
-curl "http://0.0.0.0:4004/"
+curl "http://0.0.0.0:8080/"
 ```
 
 ## Development
