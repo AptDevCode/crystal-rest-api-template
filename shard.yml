@@ -13,5 +13,15 @@ crystal: 1.8.2
 license: MIT
 
 dependencies:
+  dotenv:
+    github: drum445/dotenv
+  granite:
+    github: amberframework/granite
   grip:
     github: grip-framework/grip
+  hardwire:
+    github: rwnx/hardwire
+  micrate:
+    github: juanedi/micrate
+  pg:
+    github: will/crystal-pg
