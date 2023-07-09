@@ -1,5 +1,5 @@
 require "grip"
-require "./project_controller"
+require "./customer_controller"
 
 class Application < Grip::Application
   def port : Int32
@@ -10,6 +10,7 @@ class Application < Grip::Application
     environment = ENV["APP_ENV"] || "development"
     super(environment: "development", serve_static: false)
 
-    get "/", ProjectController
+    get "/customers", CustomerController, as: :get
+    get "/customers/:id", CustomerController, as: :get_by_id
   end
 end
