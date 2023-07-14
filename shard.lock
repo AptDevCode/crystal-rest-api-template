@@ -1,0 +1,54 @@
+version: 2.0
+shards:
+  admiral:
+    git: https://github.com/jwaldrip/admiral.cr.git
+    version: 1.12.1
+
+  backtracer:
+    git: https://github.com/sija/backtracer.cr.git
+    version: 1.2.2
+
+  clear:
+    git: https://github.com/anykeyh/clear.git
+    version: 0.9+git.commit.480289555c833793fa6964398fefec6b7e25168d
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.10.1
+
+  dotenv:
+    git: https://github.com/drum445/dotenv.git
+    version: 0.5.0
+
+  exception_page:
+    git: https://github.com/crystal-loot/exception_page.git
+    version: 0.3.1
+
+  generate:
+    git: https://github.com/anykeyh/generate.cr.git
+    version: 0.1.0+git.commit.f5dafc934a70e0ee2f246dddf3df44686f844da2
+
+  grip:
+    git: https://github.com/grip-framework/grip.git
+    version: 2.0.1
+
+  hardwire:
+    git: https://github.com/rwnx/hardwire.git
+    version: 1.1.1
+
+  inflector:
+    git: https://github.com/anykeyh/inflector.cr.git
+    version: 0.1.8+git.commit.dc5c898b0a834617d8b3ff73ac5a2239bd9fc019
+
+  micrate:
+    git: https://github.com/juanedi/micrate.git
+    version: 0.12.0
+
+  pg:
+    git: https://github.com/will/crystal-pg.git
+    version: 0.23.2
+
+  radix:
+    git: https://github.com/luislavena/radix.git
+    version: 0.4.1
+
