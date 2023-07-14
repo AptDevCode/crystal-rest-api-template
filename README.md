@@ -3,7 +3,7 @@
 This repo defines a standard of creating a REST API that interfaces with a relational database.
 
 - It's using the grip-framework to wire up the RESTful endpoints.
-- Granite is being used as the ORM.
+- Clear is being used as the ORM. This means PostgreSQL is the target database.
 - Micrate handles database migrations against a Postgres DB.
 - Your `.env` file will be loaded via dotenv.
 - Hardwire handles the dependency injection!
@@ -63,4 +63,4 @@ It's crystal. Have fun!
 
 ## Contributors
 
-- [Jose Chavez](https://github.com/your-github-user) - creator and maintainer
+- [Jose Chavez](https://github.com/RockManJoe) - creator and maintainer
