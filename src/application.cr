@@ -8,7 +8,9 @@ class Application < Grip::Application
 
   def initialize
     environment = ENV["APP_ENV"] || "development"
-    super(environment: "development", serve_static: false)
+    super(environment: environment, serve_static: false)
+
+    puts "Starting #{environment} server on port #{port}..."
 
     get "/customers", CustomerController, as: :get
     get "/customers/:id", CustomerController, as: :get_by_id

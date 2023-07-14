@@ -1,4 +1,7 @@
 require "granite/base"
+require "../connection"
+
+add_connection
 
 class Product < Granite::Base
   table :product
