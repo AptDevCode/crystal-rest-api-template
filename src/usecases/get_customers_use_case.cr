@@ -1,8 +1,8 @@
 require "../entities/customer"
 
 class GetCustomersUseCase
-  def get_all_customers : Granite::Collection(Customer)
-    customers = Customer.all
+  def get_all_customers : Array(Customer)
+    customers = Customer.query.to_a
     if customers.empty? || customers.nil?
       raise "No customers found"
     end
@@ -10,6 +10,6 @@ class GetCustomersUseCase
   end
 
   def get_customer_by_id(id : Int) : Customer
-    Customer.find_by!(id: id)
+    Customer.find!({id: id})
   end
 end

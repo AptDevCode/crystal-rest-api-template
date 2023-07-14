@@ -1,15 +1,13 @@
-require "granite/base"
-require "../connection"
+require "clear"
 
-add_connection
+class Product
+  include Clear::Model
 
-class Product < Granite::Base
-  table :product
-
-  column id : Int64, primary: true
+  column id : Int64, primary: true, presence: false
   column name : String
   column price : Float64
   column sold_by : String
 
-  timestamps
+  column created_at : Time
+  column updated_at : Time
 end

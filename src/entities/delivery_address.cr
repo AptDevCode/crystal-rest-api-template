@@ -1,16 +1,9 @@
-require "granite/base"
-require "../connection"
+require "clear"
 
-add_connection
+class DeliveryAddress
+  include Clear::Model
 
-class DeliveryAddress < Granite::Base
-  connection orderman
-
-  # Specify the table name
-  table :delivery_address
-
-  # Define the columns
-  column id : Int64, primary: true
+  column id : Int64, primary: true, presence: false
   column customer_id : Int64
   column address1 : String
   column address2 : String
@@ -18,9 +11,8 @@ class DeliveryAddress < Granite::Base
   column state : String
   column zip : String
 
-  # Timestamps
-  timestamps
+  column created_at : Time
+  column updated_at : Time
 
-  # Define the associations
   belongs_to customer : Customer
 end

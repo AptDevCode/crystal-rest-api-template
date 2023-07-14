@@ -1,21 +1,13 @@
-require "granite/base"
-require "../connection"
+require "clear"
 
-add_connection
+class Customer
+  include Clear::Model
 
-# TODO: use Clear framework instead of Granite
-# https://clear.gitbook.io/project/introduction/installation
-class Customer < Granite::Base
-  connection orderman
-
-  # Table name
-  table :customer
-
-  column id : Int64, primary: true
+  column id : Int64, primary: true, presence: false
   column name : String
   column email : String
   column phone : String
 
-  # Timestamps
-  timestamps
+  column created_at : Time
+  column updated_at : Time
 end

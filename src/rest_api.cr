@@ -1,10 +1,14 @@
 require "dotenv"
+require "log"
 require "./application"
+require "./entities/connection"
 
 module Crystal::Rest::Api
   VERSION = "1.0.0"
 
-  puts "Running application"
+  add_connection
+
+  Log.info { "Running application" }
   app = Application.new
   app.run
 end

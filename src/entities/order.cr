@@ -1,18 +1,16 @@
-require "granite/base"
-require "../connection"
+require "clear"
 
-add_connection
+class Order
+  include Clear::Model
 
-class Order < Granite::Base
-  table :orders
-
-  column id : Int64, primary: true
+  column id : Int64, primary: true, presence: false
   column customer_id : Int64
   column delivery_address_id : Int64
   column order_number : String
   column order_status : String
 
-  timestamps
+  column created_at : Time
+  column updated_at : Time
 
   belongs_to customer : Customer
   belongs_to delivery_address : DeliveryAddress

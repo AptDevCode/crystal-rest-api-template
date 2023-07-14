@@ -1,12 +1,9 @@
-require "granite/base"
-require "../connection"
+require "clear"
 
-add_connection
+class Invoice
+  include Clear::Model
 
-class Invoice < Granite::Base
-  table :invoice
-
-  column id : Int64, primary: true
+  column id : Int64, primary: true, presence: false
   column customer_id : Int64
   column invoice_number : String
   column invoice_status : String
@@ -16,7 +13,8 @@ class Invoice < Granite::Base
   column payment_method : String
   column payment_status : String
 
-  timestamps
+  column created_at : Time
+  column updated_at : Time
 
   belongs_to customer : Customer
 end

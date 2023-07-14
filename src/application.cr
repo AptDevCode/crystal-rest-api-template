@@ -1,3 +1,4 @@
+require "log"
 require "grip"
 require "./customer_controller"
 
@@ -10,7 +11,7 @@ class Application < Grip::Application
     environment = ENV["APP_ENV"] || "development"
     super(environment: environment, serve_static: false)
 
-    puts "Starting #{environment} server on port #{port}..."
+    Log.info { "Starting #{environment} server on port #{port}..." }
 
     get "/customers", CustomerController, as: :get
     get "/customers/:id", CustomerController, as: :get_by_id
