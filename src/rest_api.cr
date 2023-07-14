@@ -6,7 +6,7 @@ require "./entities/connection"
 module Crystal::Rest::Api
   VERSION = "1.0.0"
 
-  add_connection
+  connect_to_db
 
   Log.info { "Running application" }
   app = Application.new
